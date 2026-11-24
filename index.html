@@ -1,3 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>&lt;model-viewer&gt; template</title>
+<meta charset="utf-8">
+<meta name="description" content="&lt;model-viewer&gt; template">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- <model-viewer> HTML element -->
 <model-viewer src="bagaani.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" camera-orbit="58.81deg 55.14deg 8.774m" field-of-view="30deg">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
@@ -9,3 +20,16 @@
         <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
     </div>
 </model-viewer>
+<script>
+	// javascript that is call "playModel()" that find the html element ID call "gear" and play the element once and return back to start position.
+        function playModel() {
+               document.getElementById('gear').play({ repetitions: 0, pingpong: true});
+        }
+</script>
+ 
+ 
+    <script src="script.js"></script>
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</body>
+</html>
